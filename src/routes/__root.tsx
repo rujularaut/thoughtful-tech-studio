@@ -12,24 +12,27 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
+    <div className="container-page flex min-h-[70vh] flex-col justify-center py-24">
+      <p className="eyebrow text-muted-foreground">404</p>
+      <h1 className="display-lg mt-4 max-w-2xl">
+        This page took a <span className="italic-accent">different path.</span>
+      </h1>
+      <p className="mt-4 max-w-md text-muted-foreground">
+        The page you're looking for doesn't exist or has moved.
+      </p>
+      <div className="mt-8">
+        <Link
+          to="/"
+          className="inline-flex h-11 items-center rounded-full bg-ink px-6 text-sm text-on-ink transition-colors hover:bg-ink-soft"
+        >
+          Back to home
+        </Link>
       </div>
     </div>
   );
@@ -43,31 +46,25 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => {
-              router.invalidate();
-              reset();
-            }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Try again
-          </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Go home
-          </a>
-        </div>
+    <div className="container-page flex min-h-[70vh] flex-col justify-center py-24">
+      <p className="eyebrow text-muted-foreground">Something went wrong</p>
+      <h1 className="display-md mt-4">This page didn't load.</h1>
+      <p className="mt-3 max-w-md text-muted-foreground">
+        Please try again, or head back to the home page.
+      </p>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <button
+          onClick={() => {
+            router.invalidate();
+            reset();
+          }}
+          className="inline-flex h-11 items-center rounded-full bg-ink px-6 text-sm text-on-ink hover:bg-ink-soft"
+        >
+          Try again
+        </button>
+        <a href="/" className="inline-flex h-11 items-center rounded-full border px-6 text-sm hover:bg-stone">
+          Go home
+        </a>
       </div>
     </div>
   );
@@ -78,20 +75,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Forma Digital — Thoughtful tech. Practical solutions." },
+      {
+        name: "description",
+        content:
+          "Forma Digital is a founder-led technology studio building websites, software, automation and data tools for individuals, startups and businesses.",
+      },
+      { name: "author", content: "Forma Digital" },
+      { name: "theme-color", content: "#F5F2EC" },
+      { property: "og:site_name", content: "Forma Digital" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
       },
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
@@ -120,8 +123,18 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-on-ink"
+      >
+        Skip to content
+      </a>
+      <SiteHeader />
+      <main id="main">
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <Toaster position="bottom-center" />
     </QueryClientProvider>
   );
 }
