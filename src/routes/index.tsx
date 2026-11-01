@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Forma Digital — Your problem. Our next big idea." },
       {
         property: "og:description",
-        content: "Thoughtful tech. Practical solutions. Real people. Meet the studio behind MediBook and TickReply.",
+        content: "Technology that makes sense. Real people. Meet the studio behind MediBook and TickReply.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
