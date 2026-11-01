@@ -62,9 +62,12 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
         >
           Try again
         </button>
-        <a href="/" className="inline-flex h-11 items-center rounded-full border px-6 text-sm hover:bg-stone">
+        <Link
+          to="/"
+          className="inline-flex h-11 items-center rounded-full border px-6 text-sm hover:bg-stone"
+        >
           Go home
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -95,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
       },
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
