@@ -4,11 +4,11 @@
  */
 
 export const studio = {
-  name: "Forma Digital",
-  tagline: "Thoughtful tech. Practical solutions.",
+  name: "openframe",
+  tagline: "Technology that makes sense.",
   philosophy: "Technology should make things easier, not more complicated.",
   // Placeholder contact details — replace with the real ones.
-  email: "hello@formadigital.studio",
+  email: "hello@openframe.com",
   // International format without "+" or spaces, e.g. "919876543210". Leave empty to hide.
   whatsapp: "",
   location: "India · working with clients anywhere",
