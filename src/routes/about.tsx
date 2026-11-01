@@ -43,7 +43,7 @@ function AboutPage() {
             {founderIntro}
           </p>
           <p className="text-muted-foreground md:col-span-4 md:col-start-9 animate-rise [animation-delay:300ms]">
-            Forma Digital is a new, founder-led studio. We're growing carefully, working on real client
+            openframe is a new, founder-led studio. We're growing carefully, working on real client
             projects, and building the kind of studio we'd want to hire ourselves.
           </p>
         </div>

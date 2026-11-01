@@ -14,8 +14,8 @@ export const Route = createFileRoute("/work/$slug")({
   },
   head: ({ loaderData }) => {
     const p = loaderData?.project;
-    if (!p) return { meta: [{ title: "Project not found — Forma Digital" }, { name: "robots", content: "noindex" }] };
-    const title = `${p.name} case study — Forma Digital`;
+    if (!p) return { meta: [{ title: "Project not found — openframe" }, { name: "robots", content: "noindex" }] };
+    const title = `${p.name} case study — openframe`;
     return {
       meta: [
         { title },

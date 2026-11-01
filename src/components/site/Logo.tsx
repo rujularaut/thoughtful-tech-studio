@@ -23,7 +23,7 @@ export function Logo({ className, tone = "ink" }: { className?: string; tone?: "
         />
       </svg>
       <span className="font-display text-[1.35rem] leading-none tracking-tight">
-        Forma <span className="italic">Digital</span>
+        open <span className="italic">frame</span>
       </span>
     </Link>
   );

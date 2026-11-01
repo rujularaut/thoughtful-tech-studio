@@ -12,13 +12,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Start a project — Contact Forma Digital" },
+      { title: "Start a project — Contact openframe" },
       {
         name: "description",
         content:
           "Tell us what you're working on. You don't need a perfect plan — share your idea, challenge or goal and we'll explore what makes sense.",
       },
-      { property: "og:title", content: "Tell us what you're working on — Forma Digital" },
+      { property: "og:title", content: "Tell us what you're working on — openframe" },
       {
         property: "og:description",
         content: "You don't need a perfect plan. Tell us your idea, challenge, or goal, and we'll explore what makes sense.",

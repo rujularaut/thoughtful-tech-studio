@@ -10,13 +10,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Forma Digital" },
+      { title: "Services — openframe" },
       {
         name: "description",
         content:
           "Websites, custom software & SaaS, AI and automation, WhatsApp integrations, data analytics and creative digital services — shaped around your needs.",
       },
-      { property: "og:title", content: "Services — Forma Digital" },
+      { property: "og:title", content: "Services — openframe" },
       {
         property: "og:description",
         content: "Six practical ways we help individuals, startups and businesses solve problems with technology.",

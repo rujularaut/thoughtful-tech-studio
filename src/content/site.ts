@@ -52,7 +52,7 @@ export const founders: Founder[] = [
 ];
 
 export const founderIntro =
-  "We're Rujula and Ritisha, the people behind Forma Digital. We believe technology should make things easier, not more complicated. We enjoy understanding problems, exploring ideas, and building solutions that genuinely help people and businesses.";
+  "We're Rujula and Ritisha, the people behind openframe. We believe technology should make things easier, not more complicated. We enjoy understanding problems, exploring ideas, and building solutions that genuinely help people and businesses.";
 
 export type Service = {
   id: string;

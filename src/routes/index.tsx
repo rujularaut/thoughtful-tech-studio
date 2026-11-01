@@ -12,13 +12,13 @@ import { founderIntro, founders, problems, processSteps, projects, services, stu
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Forma Digital — Your problem. Our next big idea." },
+      { title: "openframe — Your problem. Our next big idea." },
       {
         name: "description",
         content:
           "A small, founder-led studio building websites, software, AI automation, WhatsApp integrations and data tools — for projects of every size.",
       },
-      { property: "og:title", content: "Forma Digital — Your problem. Our next big idea." },
+      { property: "og:title", content: "openframe — Your problem. Our next big idea." },
       {
         property: "og:description",
         content: "Technology that makes sense. Real people. Meet the studio behind MediBook and TickReply.",

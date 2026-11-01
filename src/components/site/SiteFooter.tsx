@@ -81,7 +81,7 @@ export function SiteFooter() {
           aria-hidden="true"
           className="pointer-events-none mt-20 select-none font-display text-[19vw] leading-[0.8] tracking-[-0.05em] text-on-ink/[0.07] md:text-[15vw]"
         >
-          Forma
+          openframe
         </div>
 
         <div className="mt-6 flex flex-col gap-3 border-t pt-6 text-xs text-on-ink-muted md:flex-row md:justify-between">

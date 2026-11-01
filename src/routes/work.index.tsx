@@ -8,13 +8,13 @@ import { projects } from "@/content/site";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
-      { title: "Work — MediBook & TickReply | Forma Digital" },
+      { title: "Work — MediBook & TickReply | openframe" },
       {
         name: "description",
         content:
           "Our two client projects in development: MediBook, a hospital appointment platform, and TickReply, a review management SaaS with WhatsApp and AI assistance.",
       },
-      { property: "og:title", content: "Work — MediBook & TickReply | Forma Digital" },
+      { property: "og:title", content: "Work — MediBook & TickReply | openframe" },
       {
         property: "og:description",
         content: "Honest, in-progress case studies of the two client projects we're building right now.",

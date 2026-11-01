@@ -78,15 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Forma Digital — Thoughtful tech. Practical solutions." },
+      { title: "openframe — Thoughtful tech. Practical solutions." },
       {
         name: "description",
         content:
-          "Forma Digital is a founder-led technology studio building websites, software, automation and data tools for individuals, startups and businesses.",
+          "openframe is a founder-led technology studio building websites, software, automation and data tools for individuals, startups and businesses.",
       },
-      { name: "author", content: "Forma Digital" },
+      { name: "author", content: "openframe" },
       { name: "theme-color", content: "#F5F2EC" },
-      { property: "og:site_name", content: "Forma Digital" },
+      { property: "og:site_name", content: "openframe" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
