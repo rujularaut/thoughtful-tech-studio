@@ -30,7 +30,8 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-type Errors = Partial<Record<string, string>>;
+type FieldKey = "name" | "email" | "business" | "service" | "description" | "budget" | "timeline" | "website" | "elapsedMs";
+type Errors = { [K in FieldKey]?: string | undefined };
 
 function ContactPage() {
   return (
@@ -134,7 +135,7 @@ function InquiryForm() {
     if (!parsed.success) {
       const next: Errors = {};
       for (const issue of parsed.error.issues) {
-        const key = String(issue.path[0]);
+        const key = String(issue.path[0]) as FieldKey;
         if (!next[key]) next[key] = issue.message;
       }
       setErrors(next);
@@ -298,7 +299,7 @@ function Field({
   id: string;
   label: string;
   optional?: boolean;
-  error?: string;
+  error?: string | undefined;
   className?: string;
   children: React.ReactNode;
 }) {

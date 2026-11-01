@@ -12,7 +12,7 @@ export function ImageSlot({
   className,
   children,
 }: {
-  src?: string;
+  src?: string | undefined;
   alt: string;
   label: string;
   className?: string;
