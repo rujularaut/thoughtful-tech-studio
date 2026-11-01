@@ -16,7 +16,7 @@ export function ProjectVisual({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-[1.75rem] p-5 sm:p-8",
+        "relative overflow-hidden rounded-[1.75rem] p-5 text-ink sm:p-8",
         slug === "medibook" ? "bg-sage" : "bg-stone",
         className,
       )}

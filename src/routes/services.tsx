@@ -82,7 +82,7 @@ function ServicesPage() {
                     <li
                       key={item}
                       className={cn(
-                        "flex items-center gap-3 px-5 py-4 text-[0.95rem]",
+                        "flex items-center gap-3 px-5 py-4 text-[0.95rem] sm:[&:last-child:nth-child(odd)]:col-span-2",
                         i % 2 === 1 ? "bg-ivory" : "bg-stone",
                       )}
                     >

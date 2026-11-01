@@ -122,7 +122,7 @@ function CaseStudy() {
             </Reveal>
             <ul className="mt-10 grid gap-px overflow-hidden rounded-2xl bg-line sm:grid-cols-2">
               {p.plannedFeatures.map((f, i) => (
-                <Reveal as="li" key={f.title} delay={i * 60} className="bg-ivory p-6">
+                <Reveal as="li" key={f.title} delay={i * 60} className="bg-ivory p-6 sm:[&:last-child:nth-child(odd)]:col-span-2">
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="font-display text-xl">{f.title}</h3>
                     <span className="eyebrow inline-flex shrink-0 items-center gap-1 text-muted-foreground">
